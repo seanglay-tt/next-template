@@ -1,7 +1,8 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import type { LocaleParams } from '@/types/locale';
 import React from 'react';
 
-export default async function Home({ params }: { params: { locale: 'en' | 'km' } }) {
+export default async function Home({ params }: { params: LocaleParams }) {
   const { locale } = await params;
   setRequestLocale(locale);
 
